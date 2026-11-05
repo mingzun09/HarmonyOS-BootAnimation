@@ -21,7 +21,7 @@ from pathlib import Path
 import re
 import zipfile
 
-from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont, ImageOps
 import numpy as np
 
 ROOT = Path(__file__).resolve().parent
@@ -233,16 +233,19 @@ def prepare_custom_image(path: Path, config: dict) -> Image.Image:
     background = tuple(int(config["background"][i : i + 2], 16) for i in (1, 3, 5))
     with Image.open(path) as source:
         source.load()
-        image = source.convert("RGBA")
+        image = ImageOps.exif_transpose(source).convert("RGBA")
         scale = min(width / image.width, height / image.height)
         resized = image.resize(
             (max(1, round(image.width * scale)), max(1, round(image.height * scale))),
             Image.Resampling.LANCZOS,
         )
         canvas = Image.new("RGB", (width, height), background)
+        # The RGBA image is both the source and the alpha mask, so transparent
+        # pixels reveal the configured background instead of turning black.
         canvas.paste(
-            resized.convert("RGB"),
+            resized,
             ((width - resized.width) // 2, (height - resized.height) // 2),
+            resized,
         )
     return canvas
 

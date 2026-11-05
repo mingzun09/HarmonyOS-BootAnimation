@@ -96,7 +96,7 @@ python build.py --mode custom
 python build.py
 ~~~
 
-生成的模块位于 artifacts/HarmonyOS-BootAnimation-v1.0.0.zip，同时生成 GIF/PNG 预览。
+生成的模块位于 artifacts/HarmonyOS-BootAnimation-v1.0.1.zip，同时生成 GIF/PNG 预览。
 
 更完整的图片规范、尺寸建议和常见问题见 [自定义动画指南](docs/CUSTOMIZATION.md)。
 
@@ -113,9 +113,9 @@ python tests/validate.py
 生成物：
 
 ~~~text
-artifacts/HarmonyOS-BootAnimation-v1.0.0.zip
-artifacts/HarmonyOS-BootAnimation-v1.0.0-preview.gif
-artifacts/HarmonyOS-BootAnimation-v1.0.0-poster.png
+artifacts/HarmonyOS-BootAnimation-v1.0.1.zip
+artifacts/HarmonyOS-BootAnimation-v1.0.1-preview.gif
+artifacts/HarmonyOS-BootAnimation-v1.0.1-poster.png
 ~~~
 
 build.py 会：
