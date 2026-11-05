@@ -1,5 +1,9 @@
 # HarmonyOS 风格开机动画模块
 
+[![Build module](https://github.com/mingzun09/HarmonyOS-BootAnimation/actions/workflows/build.yml/badge.svg)](https://github.com/mingzun09/HarmonyOS-BootAnimation/actions/workflows/build.yml)
+[![GitHub release](https://img.shields.io/github/v/release/mingzun09/HarmonyOS-BootAnimation)](https://github.com/mingzun09/HarmonyOS-BootAnimation/releases)
+[![License: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
+
 一个面向 **HyperOS / MIUI / AOSP** 的系统无损（systemless）开机动画模块，兼容 **Magisk、KernelSU、KernelSU Next、APatch** 以及它们的**挂载元模块**。动画为原创绘制的 HarmonyOS 风格字标，不是华为官方资源。
 
 ![预览](docs/images/preview.gif)
