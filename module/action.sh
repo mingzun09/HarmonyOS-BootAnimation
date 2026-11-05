@@ -1,6 +1,8 @@
 #!/system/bin/sh
 MODDIR=${0%/*}
-printf '%s\n' 'HarmonyOS Boot Animation 1.0.0 - diagnostics'
+MODULE_VERSION=$(grep '^version=' "$MODDIR/module.prop" 2>/dev/null | cut -d= -f2-)
+[ -n "$MODULE_VERSION" ] || MODULE_VERSION=unknown
+printf '%s\n' "HarmonyOS Boot Animation $MODULE_VERSION - diagnostics"
 if [ -f "$MODDIR/common/lib.sh" ]; then
   . "$MODDIR/common/lib.sh"
   HSTAGE=action

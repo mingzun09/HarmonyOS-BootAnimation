@@ -81,9 +81,9 @@ python build.py --mode custom
 输出：
 
 ~~~text
-artifacts/HarmonyOS-BootAnimation-v1.0.0.zip
-artifacts/HarmonyOS-BootAnimation-v1.0.0-preview.gif
-artifacts/HarmonyOS-BootAnimation-v1.0.0-poster.png
+artifacts/HarmonyOS-BootAnimation-v1.0.1.zip
+artifacts/HarmonyOS-BootAnimation-v1.0.1-preview.gif
+artifacts/HarmonyOS-BootAnimation-v1.0.1-poster.png
 ~~~
 
 先看预览 GIF，再把 ZIP 安装到手机。修改图片后不需要改模块脚本。
