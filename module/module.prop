@@ -1,0 +1,7 @@
+id=harmonyos_bootanimation
+name=HarmonyOS Boot Animation (HyperOS 1)
+version=1.0.0
+versionCode=10000
+author=mingzun09 and contributors
+description=Original HarmonyOS-style animation; Magisk / KernelSU / APatch, mount-metamodule compatible. Systemless, no boot-logo flashing.
+updateJson=https://raw.githubusercontent.com/mingzun09/HarmonyOS-BootAnimation/main/update.json

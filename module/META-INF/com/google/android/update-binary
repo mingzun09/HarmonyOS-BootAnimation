@@ -1,0 +1,19 @@
+#!/sbin/sh
+# Magisk manager entry point. KSU and APatch use their own module installers
+# and intentionally do not execute this file. Recovery flashing is unsupported.
+umask 022
+OUTFD=$2
+ZIPFILE=$3
+ui_print() { echo "$1"; }
+if [ -z "$ZIPFILE" ] || [ ! -f /data/adb/magisk/util_functions.sh ]; then
+  ui_print 'Install this ZIP from Magisk, KernelSU or APatch module manager.'
+  ui_print 'Do not flash it as a boot image or from recovery.'
+  exit 1
+fi
+. /data/adb/magisk/util_functions.sh
+if [ "${MAGISK_VER_CODE:-0}" -lt 20400 ]; then
+  ui_print 'Magisk 20.4 or newer is required.'
+  exit 1
+fi
+install_module
+exit 0

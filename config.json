@@ -1,0 +1,16 @@
+{
+  "width": 720,
+  "height": 256,
+  "fps": 30,
+  "background": "#000000",
+  "mode": "generated",
+  "generated": {
+    "intro_frames": 60,
+    "loop_frames": 60
+  },
+  "custom": {
+    "intro_dir": "artwork/custom/intro",
+    "loop_dir": "artwork/custom/loop",
+    "fit": "contain"
+  }
+}

@@ -1,0 +1,13 @@
+# Build output
+.build/
+artifacts/
+__pycache__/
+*.py[cod]
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Local editor
+.vscode/
+.idea/
